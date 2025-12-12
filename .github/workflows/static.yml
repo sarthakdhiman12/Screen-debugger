@@ -36,7 +36,7 @@ jobs:
            # ⚠️ PASTE YOUR ACTUAL VALUES INSIDE THE QUOTES BELOW ⚠️
            # Replace the text inside "" with your real keys
            VITE_SUPABASE_URL: "https://qbgplfgmpemiegfodive.supabase.co"
-           VITE_SUPABASE_PUBLISHABLE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFiZ3BsZmdtcGVtaWVnZm9kaXZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU0NzAzMzksImV4cCI6MjA4MTA0NjMzOX0.aPoYf0a2BkzH2MkNUCfiEiKnZkzydd8QhaDjs2dbVec"
+           VITE_SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFiZ3BsZmdtcGVtaWVnZm9kaXZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU0NzAzMzksImV4cCI6MjA4MTA0NjMzOX0.aPoYf0a2BkzH2MkNUCfiEiKnZkzydd8QhaDjs2dbVec"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
