@@ -33,15 +33,15 @@ jobs:
       - name: Build Project
         run: npm run build
         env:
-           # These inject the secrets you added in Settings (if any)
+           # These make sure your app can connect to the backend
            VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
            VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This is the crucial fix: Upload the 'dist' folder, not '.'
-          path: ./dist
+          # THIS WAS THE PROBLEM. It must be './dist', not '.'
+          path: './dist'
 
   deploy:
     environment:
