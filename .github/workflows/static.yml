@@ -30,17 +30,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # I removed the 'env' section here so it uses your .env file
       - name: Build Project
         run: npm run build
-        env:
-           # These make sure your app can connect to the backend
-           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # THIS WAS THE PROBLEM. It must be './dist', not '.'
           path: './dist'
 
   deploy:
